@@ -51,16 +51,58 @@ Tu misión es aplicar principios de **clean code** para que el código sea más 
 - El código **debe compilar y funcionar exactamente igual** después de la refactorización.
 - No se deben añadir cambios de comportamiento.
 - Puedes dividir el método en otros métodos privados si mejora la claridad.
-- No necesitas test automatizados para esta kata, pero sería ideal incluirlos si quieres practicar TDD.
 
 ---
 
-## 🧠 Consejos
+## ✅ Tests
 
-- Empieza por identificar los `if` innecesarios o que se podrían simplificar.
-- Usa `return` para salir del método si ya no es necesario seguir.
-- Declara constantes para los valores como `0`, `100`, etc., si tienen un significado lógico.
-- No te precipites a hacer muchos cambios de golpe: ve paso a paso.
+Este proyecto incluye **tests unitarios** para la lógica de combate implementada en `BattleService`, utilizando **JUnit 5**.
+
+### 🧪 Cómo ejecutar los tests
+
+Puedes lanzar todos los tests con Maven:
+
+```bash
+mvn test
+```
+
+Se recomienda ejecutar los tests antes de empezar a refactorizar, inspeccionando su salida y asegurándote de que:
+
+- ✅ Todos los tests pasan correctamente
+- 📊 Se cubren todas las ramas posibles del método `fight(...)` de `BattleService`
+
+### 🧰 Tecnologías
+
+- 🧪 **JUnit 5**
+- ☕ **Java 21**
+- 🔧 **Maven**
+
+## 🧠 Consejos para Refactorizar
+
+Antes de comenzar el refactoring, sigue estos pasos para trabajar con seguridad y claridad:
+
+1. Ejecuta todos los tests y revisa que pasen correctamente.
+2. Analiza qué ramas del método `fight(...)` se ejecutan en cada test (por ejemplo: el jugador ya está muerto, el enemigo no recibe daño, etc.).
+3. Asegúrate de que los tests cubren todos los caminos posibles.
+4. Tras cada cambio, vuelve a ejecutar los tests y comprueba que todo sigue funcionando como antes.
+
+Este enfoque basado en tests te permitirá refactorizar con confianza aplicando principios como:
+
+- ✅ *Early return* (retorno temprano)
+- ✅ *Fail-fast* (fallar pronto ante errores)
+- ✅ Reducción de anidamientos innecesarios
+
+---
+
+### ✨ Sugerencias para mejorar el código
+
+- 🔍 Identifica `if` innecesarios o que podrían reescribirse con retornos anticipados.
+- 🚪 Usa `return` para salir del método lo antes posible si no tiene sentido seguir.
+- 📦 Declara constantes para valores mágicos como `0`, `100`, etc., si tienen un significado lógico.
+- 🧩 Refactoriza paso a paso, sin intentar hacer demasiados cambios de golpe.
+
+Recuerda: la claridad es más importante que la complejidad. Un buen código se **entiende fácilmente sin necesidad de comentarios**.
+
 
 ---
 
