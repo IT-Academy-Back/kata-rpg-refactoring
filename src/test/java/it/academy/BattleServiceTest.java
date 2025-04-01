@@ -1,12 +1,28 @@
 package it.academy;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class BattleServiceTest {
 
     private final BattleService service = new BattleService();
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final PrintStream originalOut = System.out;
+
+    @BeforeEach
+    void setUp() {
+        System.setOut(new PrintStream(outContent));
+    }
+
+    @AfterEach
+    void tearDown() {
+        System.setOut(originalOut);
+        outContent.reset(); // limpio entre tests
+    }
 
 
     @Test
@@ -84,6 +100,9 @@ class BattleServiceTest {
 
         assertEquals(0, player.getHealth());
         assertEquals(100, enemy.getHealth());
+
+        String output = outContent.toString().trim();
+        assertTrue(output.contains("Player is already defeated."), "Output should mention player is already defeated.");
     }
 
     @Test
@@ -95,5 +114,9 @@ class BattleServiceTest {
 
         assertEquals(100, player.getHealth());
         assertEquals(0, enemy.getHealth());
+
+        String output = outContent.toString().trim();
+        assertTrue(output.contains("Enemy is already defeated."), "Output should mention enemy is already defeated.");
+
     }
 }
