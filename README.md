@@ -16,20 +16,17 @@ Tu misión es aplicar principios de **clean code** para que el código sea más 
 
 ### Mecánica del combate
 
-1. **El jugador ataca primero**:
-    - El daño se calcula como:  
-      `damageToEnemy = player.strength - enemy.defense`
-    - Si el daño es positivo, se resta al `enemy.health`.
+- El combate **solo ocurre si ambos tienen salud mayor a 0**.
+- El **jugador ataca primero**:
+    - El daño se calcula como `fuerza del jugador - defensa del enemigo`.
+    - Si el daño es positivo, se resta a la salud del enemigo.
+    - Si no hay daño, se muestra un mensaje y termina el turno.
 
-2. **Si el enemigo sigue vivo**, contraataca:
-    - El daño se calcula como:  
-      `damageToPlayer = enemy.strength - player.defense`
-    - Si el daño es positivo, se resta al `player.health`.
+- Si el enemigo **sobrevive**, contraataca:
+    - El daño se calcula como `fuerza del enemigo - defensa del jugador`.
+    - Si el daño es positivo, se resta a la salud del jugador.
 
-3. Se imprimen mensajes dependiendo del resultado:
-    - Si alguien muere (`health <= 0`), se muestra un mensaje.
-    - Si nadie muere, se indica que la batalla continúa.
-    - Si el daño es 0 o negativo, se indica que no hubo daño.
+- Se imprimen mensajes según el estado final de la lucha
 
 ---
 
