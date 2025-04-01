@@ -24,10 +24,6 @@ public abstract class Fighter {
         return defense;
     }
 
-    public String getName() {
-        return this.getClass().getSimpleName();
-    }
-
     public void setHealth(int health) {
         this.health = health;
     }
