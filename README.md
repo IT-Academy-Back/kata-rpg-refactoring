@@ -1,6 +1,9 @@
 # 🛡️ Kata de Refactoring - RPG Combat Logic
 ![Refactoring Kata](https://img.shields.io/badge/Kata%20Refactoring-Easy-brightgreen?style=flat-square)
 
+![Java CI](https://github.com/IT-Academy-Back/kata-rpg-refactoring/actions/workflows/ci.yml/badge.svg)
+⚠️ Este badge apunta al repo original. Si haces un fork/template, cámbialo a tu usuario/repositorio.
+
 Bienvenido a esta kata de refactorización. El objetivo es mejorar el código de una clase que contiene lógica de combate en un juego de rol (RPG). El código inicial está plagado de **estructuras anidadas**, **duplicación de lógica**, **poca claridad**, y **números mágicos**.
 
 Tu misión es aplicar principios de **clean code** para que el código sea más **legible**, **mantenible** y **fácil de testear**.
