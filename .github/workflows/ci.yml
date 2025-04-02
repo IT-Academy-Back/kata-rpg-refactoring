@@ -34,6 +34,13 @@ jobs:
       - name: Build and Test with Maven
         run: mvn -B clean verify test
 
+      - name: Generate modern JaCoCo report
+        uses: danielpalme/ReportGenerator-GitHub-Action@5.1.26
+        with:
+          reports: target/site/jacoco/jacoco.xml
+          targetdir: target/site/jacoco
+          reporttypes: HtmlInline_AzurePipelines_Dark
+
       - name: Deploy JaCoCo to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
