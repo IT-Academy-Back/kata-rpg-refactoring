@@ -53,7 +53,10 @@ jobs:
         if: env.SONAR_TOKEN != ''
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn sonar:sonar \
-          -Dsonar.projectKey=TU_USUARIO_REPO \
-          -Dsonar.organization=TU_ORG \
-          -Dsonar.host.url=https://sonarcloud.io
+        run: |
+          mvn sonar:sonar \
+            -Dsonar.projectKey=${{ github.repository }} \
+            -Dsonar.organization=${{ github.repository_owner }} \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.login=$SONAR_TOKEN \
+            -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
