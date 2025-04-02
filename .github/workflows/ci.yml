@@ -39,7 +39,7 @@ jobs:
         with:
           reports: target/site/jacoco/jacoco.xml
           targetdir: target/site/jacoco
-          reporttypes: HtmlInline_AzurePipelines_Dark
+          reporttypes: HtmlInline_AzurePipelines_Light
 
       - name: Deploy JaCoCo to GitHub Pages
         if: github.ref == 'refs/heads/main'
