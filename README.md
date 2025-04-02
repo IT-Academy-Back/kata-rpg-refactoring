@@ -1,11 +1,25 @@
 
 ![Refactoring Kata](https://img.shields.io/badge/Kata%20Refactoring-Easy-brightgreen?style=flat-square)
+![Kata CI Test](https://img.shields.io/github/actions/workflow/status/IT-Academy-Back/kata-rpg-refactoring/ci.yml?branch=main&label=CI%20Kata%20Test&style=flat-square)
 
-![Java CI](https://github.com/IT-Academy-Back/kata-rpg-refactoring/actions/workflows/ci.yml/badge.svg)
+> ⚠️ **Nota:** El badge de CI apunta al repositorio original.  
+> Si haces un *fork* o usas este proyecto como *template*, cambia la URL del badge para que apunte a tu propio repositorio.
 
-⚠️ Este badge apunta al repo original. Si haces un fork/template, cámbialo a tu usuario/repositorio.
+---
 
-⚠️ Puedes ir a ver tu reporte de covertura de codigo en el siguiente link: **https://[TU_GITHUB_USER].github.io/[TU_REPOSITORIO]/**
+### 📊 **Cobertura de código con JaCoCo**
+
+Este proyecto genera automáticamente un informe de cobertura tras cada *push* a `main`.  
+Puedes consultar el reporte accediendo a:
+
+```
+https://TU_USUARIO.github.io/TU_REPOSITORIO/
+```
+
+> 📝 Si usas este repositorio como **template**, GitHub Pages se activará automáticamente  
+> tras el primer push a `main`, cuando se genere la rama `gh-pages`.
+
+> ⚠️ Si has hecho un **fork** o un **clone**, ve a `Settings → Pages` y selecciona la rama `gh-pages`, carpeta `/ (root)` para activar GitHub Pages manualmente.
 
 --
 # 🛡️ Kata de Refactoring - RPG Combat Logic
