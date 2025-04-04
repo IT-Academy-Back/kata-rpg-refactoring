@@ -1,9 +1,10 @@
 
 ![Refactoring Kata](https://img.shields.io/badge/Kata%20Refactoring-Easy-brightgreen?style=flat-square)
 ![Kata CI Test](https://img.shields.io/github/actions/workflow/status/IT-Academy-Back/kata-rpg-refactoring/ci.yml?branch=main&label=CI%20Kata%20Test&style=flat-square)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=IT-Academy-Back_kata-rpg-refactoring&metric=coverage)](https://sonarcloud.io/summary/new_code?id=IT-Academy-Back_kata-rpg-refactoring)
 
-> ⚠️ **Nota:** El badge de CI apunta al repositorio original.  
-> Si haces un *fork* o usas este proyecto como *template*, cambia la URL del badge para que apunte a tu propio repositorio.
+> ⚠️ **Nota:** El badge de CI y cobertura apunta al repositorio original.
+> Si haces un *fork* o usas este proyecto como *template*, cambia las URLs de los badges para que apunten a tu propio repositorio.
 
 ---
 
@@ -21,7 +22,38 @@ https://TU_USUARIO.github.io/TU_REPOSITORIO/
 
 > ⚠️ Si has hecho un **fork** o un **clone**, ve a `Settings → Pages` y selecciona la rama `gh-pages`, carpeta `/ (root)` para activar GitHub Pages manualmente.
 
---
+
+## 📈 Análisis de calidad con SonarCloud
+
+Este proyecto también está conectado con [SonarCloud](https://sonarcloud.io), que analiza automáticamente la calidad del código en cada push.
+
+🔍 SonarCloud evalúa:
+
+- Errores y bugs potenciales
+- Vulnerabilidades de seguridad
+- Código duplicado
+- Calidad del código y mantenibilidad
+- Cobertura de tests (a partir de JaCoCo)
+
+🔗 Puedes consultar el análisis de este proyecto en:
+
+👉 [Ver análisis en SonarCloud](https://sonarcloud.io/project/overview?id=IT-Academy-Back_kata-rpg-refactoring)
+
+🛠️ Si usas este repositorio como template:
+1. Crea tu propia organización en SonarCloud.
+2. Vincula tu nuevo repositorio.
+3. Actualiza las variables `sonar.projectKey` y `sonar.organization` en el workflow de GitHub Actions.
+4. **Crea un token en SonarCloud y guárdalo como `SONAR_TOKEN` en los Secrets de tu repositorio en GitHub.**
+
+⚠️ Desactiva el análisis automático en la configuración de SonarCloud si estás ejecutando el análisis desde GitHub Actions (para evitar errores por duplicación de análisis).
+
+📛 También puedes añadir este badge al README para mostrar la cobertura directamente desde SonarCloud:
+
+```markdown
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=TU-USUARIO-GITHUB_TU-REPOSITORIO&metric=coverage)](https://sonarcloud.io/summary/new_code?id=TU-USUARIO-GITHUB_TU-REPOSITORIO)
+```
+---
+
 # 🛡️ Kata de Refactoring - RPG Combat Logic
 Bienvenido a esta kata de refactorización. El objetivo es mejorar el código de una clase que contiene lógica de combate en un juego de rol (RPG). El código inicial está plagado de **estructuras anidadas**, **duplicación de lógica**, **poca claridad**, y **números mágicos**.
 
